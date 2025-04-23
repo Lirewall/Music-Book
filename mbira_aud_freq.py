@@ -36,7 +36,7 @@ MBIRA_NOTES = {
 }
 
 # Band-pass filter: keeps 200–1000 Hz
-def design_bandpass(lowcut=115, highcut=2000, fs=44100, order=5):
+def design_bandpass(lowcut=115, highcut=1200, fs=44100, order=5):
     nyq = 0.5 * fs
     low = lowcut / nyq
     high = highcut / nyq
@@ -44,7 +44,7 @@ def design_bandpass(lowcut=115, highcut=2000, fs=44100, order=5):
 
 b, a = design_bandpass()
 
-# Match frequency to note
+#frequency to note
 def freq_to_note(freq):
     if freq == 0:
         return None
@@ -68,12 +68,11 @@ def detect_frequency(data):
     peak_power = fft[peak_idx]
     peak_freq = freqs[peak_idx]
 
-    # Reject low energy peaks (adjust threshold if needed)
+    
     if peak_power < 1000:
         return 0
     return peak_freq
 
-# Stream callback
 def audio_callback(indata, frames, time, status):
     if status:
         print(status)
@@ -88,7 +87,7 @@ def audio_callback(indata, frames, time, status):
             file.write(f"{note}-\n")
         print(f"Note was saved as: {note}")
 
-# Start listening
+
 print("Listening for mbira notes with noise filtering...")
 with sd.InputStream(
     samplerate=SAMPLE_RATE,
@@ -96,7 +95,7 @@ with sd.InputStream(
     dtype=FORMAT,
     channels=CHANNELS,
     callback=audio_callback,
-    device=26  # change to external mic index if needed
+    device=26  
 ):
     try:
         while True:
