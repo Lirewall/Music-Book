@@ -7,16 +7,76 @@
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <h1 class="logo">Music-Book</h1>
-    <h1>Music Book what's the book for ?</h1>
-    <h2>why dont you give a chance and record one of your most intricate pieces</h2>
+    <h1 class="logo">Music Book</h1>
+    <div class="wrap">
+        <h1 class="st-1">Music Book what's the book for ?</h1>
+        <h2 class="st-2">why dont you give a chance and record one of your most intricate pieces</h2>
+    
+        <h1 class="st-3">GO ON </h1>
+        
+        <button>Hosho</button>
+        <a href="/templates/steps.html">
+            <button>Mbira</button>
+        </a>
 
-    <h1>GO ON </h1>
-    <div class="img_tab-1"></div>
-    <div class="img_tab-2"></div>
-    <div class="img_tab-3"></div>
+    </div>
 
-    <style></style>
+    <div class="img_box-1">
+        <div class="img_tab-1">
+            <img src="/static/images/1.jpg" alt="">
+        </div>
+
+    </div>
+    
+
+    <style>
+        .wrap{
+                margin:  10% 0  0 7%;
+            }
+        .img_box-1{
+
+                position: absolute;
+                right: 30%;
+                top: 25%;
+
+                
+                
+            }
+        .img_tab-1{
+
+                width: 120px;
+                height: 300px;
+                background-color: #EF813F;
+                
+            }
+
+        .st-1{
+                font-weight: 500;
+            }
+        .st-2{
+                font-weight: 300;
+                margin: 0 900px 0 0;
+
+            }
+        .st-3{
+                font-family: 'Arial';
+                font-weight: 900    ;
+            }
+        .logo{
+                display: flex;
+                justify-content: center;
+                color: #707070;
+            }
+        button{
+            background-color: #EF813F;
+            border: none;   
+            font-size: 16px;
+            border-radius: 10%;
+            padding: 10px 20px;
+            font-family: "Poppins";
+            
+        }
+    </style>
     
 </body>
 </html>
