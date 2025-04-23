@@ -1,0 +1,17 @@
+@font-face {
+    font-family:"Poppins";
+    src: url('/static/fonts/poppins/POPPINS-MEDIUM.TTF');
+}
+@font-face {
+    font-family:"Poppins";
+    src: url('/static/fonts/poppins/POPPINS-EXTRABOLD.TTF');
+}
+@font-face {
+    font-family:"Arial";
+    src: url('/static/fonts/Arial/ARIBLK.TTF');
+}
+
+body{
+    font-family:'Poppins' , sans-serif ;
+}
+

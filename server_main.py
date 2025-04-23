@@ -11,7 +11,7 @@ app =  Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template("web.html")
+    return render_template("steps.html")
 
 def hosho():
     process = subprocess.Popen(["python" , "hosho.py"],
