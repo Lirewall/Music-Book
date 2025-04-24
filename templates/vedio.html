@@ -16,10 +16,35 @@
 
 
     </video>
-    <button>Download aud</button>
-    <button>Download music book</button>
+    <div class="wrap">
+        <a href="{{url_for('download_file' , filename='1.mp3') }}">
+            <button>Download aud</button>
+        </a>
+        <a href="{{url_for('download_file' , filename='1.txt')}}">
+            <button>Download music book</button>
+        </a>    
+    </div>
+
+
 
     <div class="music_info"></div>
     
 </body>
+<style>
+    .logo{
+        display: flex;
+        justify-content: center;
+    }
+    button{           
+        background-color: #EF813F;
+        border: none;   
+        font-size: 16px;
+        border-radius: 2%;
+        padding: 10px 20px;
+        font-family: "Poppins";          
+    }
+    .wrap{
+        margin-left:50px;
+    }
+</style>
 </html>
